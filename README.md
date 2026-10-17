@@ -75,7 +75,7 @@ Needs Node.js 18 or newer. No packages to install.
 
 ```
 node src/score.js                      # the eval; exit code 1 on any failure
-node --test "test/*.test.js"           # unit tests, including the full eval
+npm test                               # unit tests, including the full eval
 python scripts/pii_scan.py             # personal-data scan of tracked files (Python 3, standard library)
 ```
 
