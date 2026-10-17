@@ -1,0 +1,59 @@
+{
+  "about": "An INVENTED persona for the demo. Every name, employer, school, project and number in this file is made up.",
+  "name": "Alex Rivera",
+  "short": "Alex",
+  "role": "robotics engineer",
+  "contact": "the email link on the contact page",
+  "roles": [
+    { "title": "Robotics Engineer", "org": "Kestrel Field Robotics", "from": "February 2021", "to": "present" },
+    { "title": "Graduate Research Assistant", "org": "Harbor State University", "from": "January 2020", "to": "January 2021" }
+  ],
+  "otherEmployers": ["Google", "Amazon", "Tesla", "Boston Dynamics", "Microsoft", "Apple", "Meta", "Nvidia", "iRobot", "Waymo", "SpaceX", "OpenAI"],
+  "degree": "MS",
+  "workPhrases": "\\bbattery health\\b|\\bhealth (monitoring|checks?)\\b|\\bfleet health\\b",
+  "teamResults": [
+    { "name": "picking cycle", "re": "\\b5\\.5 ?s\\b", "context": "\\b(pick|cycle|fruit)", "record": "Cutting the picking cycle from 9.0 s to 5.5 s per fruit was a team result; Alex built the grasp planner." },
+    { "name": "fleet uptime", "re": "\\b95 ?%", "context": "\\buptime\\b", "record": "Fleet uptime rising from 82% to 95% was a team achievement; Alex's part was the planner and the field trials." }
+  ],
+  "answers": [
+    { "id": "a1", "q": "Tell me about Alex in a minute", "match": ["Who is Alex?", "Tell me about Alex", "Give me a summary of Alex"],
+      "a": "Alex Rivera is a robotics engineer with more than 6 years across industry and graduate research. At Kestrel Field Robotics he works on perception, localization and motion planning for field robots. His published work covers an orchard picking arm, warehouse robot localization and a battery-aware path planner." },
+    { "id": "a2", "q": "What roles is Alex looking for?", "match": ["What kind of job does he want?", "Which roles interest him?"],
+      "a": "Robotics engineer and perception engineer roles, where models run on real robots in the field." },
+    { "id": "a3", "q": "What are his strengths?", "match": ["What is he good at?", "What are Alex's strengths?"],
+      "a": "Turning lab prototypes into robots that run all day: sensor fusion, motion planning, and careful field testing with the people who operate the machines." },
+    { "id": "a4", "q": "Which skills and tools does he use?", "match": ["What is his tech stack?", "What tools does Alex use?", "What programming languages does he know?"],
+      "a": "C++, Python, ROS 2, PyTorch, OpenCV, Kalman filters and factor graphs for state estimation, and Gazebo for simulation." },
+    { "id": "a5", "q": "What did he study?", "match": ["What is his education?", "Where did Alex study?", "What degree does he have?"],
+      "a": "Alex holds a Master of Science in Mechanical Engineering from Harbor State University. His thesis was on grasp planning for soft fruit." },
+    { "id": "a6", "q": "How many years of experience does he have?", "match": ["How experienced is Alex?", "How long has he worked in robotics?"],
+      "a": "More than 6 years: since February 2021 at Kestrel Field Robotics, and a year of graduate research at Harbor State University before that." },
+    { "id": "a7", "q": "What is his biggest project?", "match": ["What is Alex proudest of?", "What is his best project?"],
+      "a": "The orchard picking arm was a team project at Kestrel Field Robotics. Alex built the grasp planner, which scores candidate grasps from a depth camera in under 40 ms. With the new planner the team cut the picking cycle from 9.0 s to 5.5 s per fruit, a team result." },
+    { "id": "a8", "q": "How does he work with others?", "match": ["Is he a team player?", "How does Alex work in a team?"],
+      "a": "He pairs with field technicians during trials, writes a short design note before building, and sends code for review in small pieces." },
+    { "id": "a9", "q": "How does he keep learning?", "match": ["How does Alex stay current?"],
+      "a": "He reads one robotics paper a week and rebuilds the key result in simulation before trying it on a robot." },
+    { "id": "a10", "q": "Has he mentored anyone?", "match": ["Does Alex mentor people?"],
+      "a": "Yes. He has mentored three interns on perception projects, and each of them shipped code to the field fleet." },
+    { "id": "a11", "q": "Can he explain his work simply?", "match": ["Can Alex explain technical work to non-engineers?"],
+      "a": "Yes. He writes one-page summaries for robot operators, for example on why a robot slows down near people." },
+    { "id": "a12", "q": "Is he open to new roles?", "match": ["Is Alex looking for a job?", "Is he open to opportunities?"],
+      "a": "Yes. He is open to robotics and perception roles. The best way to start a conversation is the email link on the contact page." },
+    { "id": "p1", "q": "How does the grasp planner work?", "match": [],
+      "a": "The orchard picking arm was a team project at Kestrel Field Robotics. Alex built the grasp planner, which scores candidate grasps from a depth camera in under 40 ms. With the new planner the team cut the picking cycle from 9.0 s to 5.5 s per fruit, a team result." },
+    { "id": "p2", "q": "How did he improve robot localization?", "match": [],
+      "a": "For warehouse robots, Alex fused lidar and wheel odometry with an error-state Kalman filter. Localization error fell from 12 cm to 3 cm in the test warehouse, which let the robots dock without a guide rail." },
+    { "id": "p3", "q": "What is the battery-aware path planner?", "match": [],
+      "a": "The battery-aware path planner plans routes and charging stops together. Fleet uptime rose from 82% to 95% after rollout, a team achievement; Alex's part was the planner and the field trials." },
+    { "id": "p4", "q": "How did he make the detection model smaller?", "match": [],
+      "a": "Alex compressed the fruit detection model from 400 MB to 25 MB, about 16× smaller, with 8-bit quantization and pruning, so it runs on the arm's onboard computer." }
+  ],
+  "topics": [
+    { "re": "\\b(grasp|grasping|picking arm|picking cycle|orchard|fruit picking)\\b", "id": "p1" },
+    { "re": "\\b(locali[sz]ation|lidar|odometry|kalman|slam)\\b", "id": "p2" },
+    { "re": "\\b(uptime|battery|charging|path planner|route planning)\\b", "id": "p3" },
+    { "re": "\\b(compress\\w*|quanti[sz]\\w*|prun\\w*|model size|smaller)\\b", "id": "p4" },
+    { "re": "\\byears?\\b[^?.!]{0,40}\\bexperience\\b|\\bexperience\\b[^?.!]{0,40}\\byears?\\b", "id": "a6" }
+  ]
+}

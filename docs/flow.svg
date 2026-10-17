@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 670" width="1000" height="670" role="img" aria-labelledby="title desc">
+<title id="title">twin-eval-kit flow</title>
+<desc id="desc">A question passes through ordered rules; fixed answers go straight to the page, the rest go to a model whose reply is post-checked. The eval set scores every route.</desc>
+<style>
+.t{fill:#e6edf3;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:600}
+.m{fill:#9da7b3;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:12.5px}
+.h{fill:#e6edf3;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:20px;font-weight:700}
+.b{fill:#161b22;stroke-width:2}
+.a{stroke:#9da7b3;stroke-width:2;fill:none;marker-end:url(#arr)}
+</style>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#9da7b3"/></marker></defs>
+<rect width="1000" height="670" rx="14" fill="#0d1117"/>
+<text class="h" x="30" y="44" text-anchor="start">twin-eval-kit: how a question is answered</text>
+<g class=""><rect class="b" x="30" y="270" width="170" height="70" rx="10" stroke="#58a6ff"/>
+<text class="t" x="115.0" y="301.0" text-anchor="middle">Visitor question</text>
+<text class="m" x="115.0" y="320.0" text-anchor="middle">free text</text></g>
+<rect x="240" y="70" width="380" height="450" rx="12" fill="none" stroke="#30363d" stroke-dasharray="6 5"/>
+<text class="t" x="260" y="96" text-anchor="start">decide(q): rules, checked in order</text>
+<g class=""><rect class="b" x="260" y="112" width="340" height="48" rx="10" stroke="#f85149"/>
+<text class="t" x="430.0" y="141.0" text-anchor="middle">Injection or 'are you human?'</text></g>
+<text class="m" x="612" y="141" text-anchor="start">→ fixed line</text>
+<g class=""><rect class="b" x="260" y="169" width="340" height="48" rx="10" stroke="#3fb950"/>
+<text class="t" x="430.0" y="198.0" text-anchor="middle">Exact approved wording</text></g>
+<text class="m" x="612" y="198" text-anchor="start">→ approved answer, word for word</text>
+<g class=""><rect class="b" x="260" y="226" width="340" height="48" rx="10" stroke="#d29922"/>
+<text class="t" x="430.0" y="255.0" text-anchor="middle">Pay, visa, start date</text></g>
+<text class="m" x="612" y="255" text-anchor="start">→ hand-off line: email</text>
+<g class=""><rect class="b" x="260" y="283" width="340" height="48" rx="10" stroke="#d29922"/>
+<text class="t" x="430.0" y="312.0" text-anchor="middle">Family, health, age, home</text></g>
+<text class="m" x="612" y="312" text-anchor="start">→ off-limits line</text>
+<g class=""><rect class="b" x="260" y="340" width="340" height="48" rx="10" stroke="#bc8cff"/>
+<text class="t" x="430.0" y="369.0" text-anchor="middle">Other employer, PhD, wrong number</text></g>
+<text class="m" x="612" y="369" text-anchor="start">→ corrected from the record</text>
+<g class=""><rect class="b" x="260" y="397" width="340" height="48" rx="10" stroke="#3fb950"/>
+<text class="t" x="430.0" y="426.0" text-anchor="middle">Known topic</text></g>
+<text class="m" x="612" y="426" text-anchor="start">→ fixed topic answer</text>
+<g class=""><rect class="b" x="260" y="454" width="340" height="48" rx="10" stroke="#58a6ff"/>
+<text class="t" x="430.0" y="483.0" text-anchor="middle">None of these</text></g>
+<text class="m" x="612" y="483" text-anchor="start">→ goes to the model</text>
+<path class="a" d="M200,305 L238,305"/>
+<g class=""><rect class="b" x="800" y="90" width="170" height="70" rx="10" stroke="#3fb950"/>
+<text class="t" x="885.0" y="121.0" text-anchor="middle">Page</text>
+<text class="m" x="885.0" y="140.0" text-anchor="middle">shows the answer</text></g>
+<path class="a" d="M700,125 L798,125"/><text class="m" x="885" y="185" text-anchor="middle">rows 1-6: fixed text</text>
+<g class=""><rect class="b" x="790" y="455" width="140" height="56" rx="10" stroke="#58a6ff"/>
+<text class="t" x="860.0" y="479.0" text-anchor="middle">Model</text>
+<text class="m" x="860.0" y="498.0" text-anchor="middle">any LLM</text></g>
+<path class="a" d="M745,479 L788,479"/>
+<g class=""><rect class="b" x="650" y="560" width="320" height="80" rx="10" stroke="#f85149"/>
+<text class="t" x="810.0" y="587.0" text-anchor="middle">finishAnswer(): post-checks</text>
+<text class="m" x="810.0" y="606.0" text-anchor="middle">markers · prompt echo · contact leak</text>
+<text class="m" x="810.0" y="623.0" text-anchor="middle">invented facts · dropped team credit</text></g>
+<path class="a" d="M860,511 L860,558"/>
+<path class="a" d="M960,558 L960,162"/>
+<g class=""><rect class="b" x="30" y="560" width="590" height="80" rx="10" stroke="#bc8cff"/>
+<text class="t" x="325.0" y="587.0" text-anchor="middle">Eval: eval/twin-eval-set.json → src/score.js</text>
+<text class="m" x="325.0" y="606.0" text-anchor="middle">approved · topic · premise · line · model · output kinds</text>
+<text class="m" x="325.0" y="623.0" text-anchor="middle">prints N/N, per-kind scores and a leak check</text></g>
+</svg>

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 380" width="1000" height="380" role="img" aria-labelledby="title desc">
+<title id="title">twin-eval-kit, step by step</title>
+<desc id="desc">Animated: a question is checked against rules, corrected against the record, a model reply is post-checked, and the scorer prints the result.</desc>
+<style>
+.t{fill:#e6edf3;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:15px;font-weight:600}
+.m{fill:#9da7b3;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:12.5px}
+.h{fill:#e6edf3;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:20px;font-weight:700}
+.b{fill:#161b22;stroke-width:2}
+.a{stroke:#9da7b3;stroke-width:2;fill:none;marker-end:url(#arr)}
+</style>
+<defs><marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+<path d="M0,0 L10,5 L0,10 z" fill="#9da7b3"/></marker></defs><style>
+.step{opacity:.4;animation:hl 13.0s infinite}
+.cap{opacity:0;animation:cap 13.0s infinite}
+.cap text{fill:#e6edf3;font-family:system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;font-size:16px}
+@keyframes hl{0%{opacity:.4}3%{opacity:1}19%{opacity:1}21%{opacity:.4}100%{opacity:.4}}
+@keyframes cap{0%{opacity:0}3%{opacity:1}19%{opacity:1}20%{opacity:0}100%{opacity:0}}
+.still{display:none}
+@media (prefers-reduced-motion:reduce){.step{animation:none;opacity:1}.cap{display:none}.still{display:inline}.dot{display:none}}
+.d0{animation-delay:0.0s}.d1{animation-delay:2.6s}.d2{animation-delay:5.2s}.d3{animation-delay:7.8s}.d4{animation-delay:10.4s}
+</style>
+<rect width="1000" height="380" rx="14" fill="#0d1117"/>
+<text class="h" x="30" y="44" text-anchor="start">twin-eval-kit, step by step</text>
+<g class="step d0"><rect class="b" x="30.0" y="110" width="168" height="110" rx="10" stroke="#58a6ff"/>
+<text class="t" x="114.0" y="152.0" text-anchor="middle">1. Question</text>
+<text class="m" x="114.0" y="171.0" text-anchor="middle">'Did uptime</text>
+<text class="m" x="114.0" y="188.0" text-anchor="middle">reach 99%?'</text></g>
+<g class="cap d0"><text x="500" y="290" text-anchor="middle">A visitor asks a question that carries a wrong number.</text></g>
+<g class="step d1"><rect class="b" x="223.0" y="110" width="168" height="110" rx="10" stroke="#f85149"/>
+<text class="t" x="307.0" y="152.0" text-anchor="middle">2. Rules</text>
+<text class="m" x="307.0" y="171.0" text-anchor="middle">injection, off-limits,</text>
+<text class="m" x="307.0" y="188.0" text-anchor="middle">approved wording</text></g>
+<path class="a" d="M202.0,165 L219.0,165"/>
+<g class="cap d1"><text x="500" y="290" text-anchor="middle">Fixed rules run first: injection, hand-offs, approved answers.</text></g>
+<g class="step d2"><rect class="b" x="416.0" y="110" width="168" height="110" rx="10" stroke="#bc8cff"/>
+<text class="t" x="500.0" y="152.0" text-anchor="middle">3. Record</text>
+<text class="m" x="500.0" y="171.0" text-anchor="middle">99% is not in</text>
+<text class="m" x="500.0" y="188.0" text-anchor="middle">the record</text></g>
+<path class="a" d="M395.0,165 L412.0,165"/>
+<g class="cap d2"><text x="500" y="290" text-anchor="middle">A number not in the record is corrected: 82% to 95%, a team result.</text></g>
+<g class="step d3"><rect class="b" x="609.0" y="110" width="168" height="110" rx="10" stroke="#d29922"/>
+<text class="t" x="693.0" y="152.0" text-anchor="middle">4. Post-check</text>
+<text class="m" x="693.0" y="171.0" text-anchor="middle">model replies:</text>
+<text class="m" x="693.0" y="188.0" text-anchor="middle">leaks, facts, credit</text></g>
+<path class="a" d="M588.0,165 L605.0,165"/>
+<g class="cap d3"><text x="500" y="290" text-anchor="middle">Any model reply is cleaned: contact info, invented facts, team credit.</text></g>
+<g class="step d4"><rect class="b" x="802.0" y="110" width="168" height="110" rx="10" stroke="#3fb950"/>
+<text class="t" x="886.0" y="152.0" text-anchor="middle">5. Score</text>
+<text class="m" x="886.0" y="171.0" text-anchor="middle">92 fixed items,</text>
+<text class="m" x="886.0" y="188.0" text-anchor="middle">no model needed</text></g>
+<path class="a" d="M781.0,165 L798.0,165"/>
+<g class="cap d4"><text x="500" y="290" text-anchor="middle">The scorer runs every item the same way, every time.</text></g>
+<circle class="dot" r="7" fill="#d29922"><animateMotion dur="13.0s" repeatCount="indefinite" path="M114.0,236 H886.0"/></circle>
+<text class="m still" x="500" y="290" text-anchor="middle">Steps 1 to 5, left to right.</text>
+<rect x="30" y="320" width="940" height="40" rx="8" fill="#161b22" stroke="#30363d"/>
+<text class="m" x="500" y="345" text-anchor="middle" style="font-family:ui-monospace,Consolas,monospace;font-size:14px;fill:#3fb950">twin eval: 92/92 (32 trick questions, 20 bad model replies)  leak check: 0</text>
+</svg>
