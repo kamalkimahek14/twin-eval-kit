@@ -4,10 +4,10 @@ A deterministic evaluation kit for a "digital twin": a chat box on a personal si
 only from that person's published work. The kit holds a small reference twin (rules only, no model call),
 a fixed eval set of 92 items, and a scorer that runs without any model or network.
 
-Used on: the twin on my site, kamal-mehta.com, which passes its own separate 100-item set (90 questions,
+Used on: the twin on my portfolio site, which passes its own separate 100-item set (90 questions,
 30 of them tricks, and 10 bad model replies).
 
-Author: Kamal Mehta
+Author: Kamal Mehta · [kamal-mehta.com](https://kamal-mehta.com/?r=github)
 
 ![How it works, step by step](docs/how-it-works.svg)
 

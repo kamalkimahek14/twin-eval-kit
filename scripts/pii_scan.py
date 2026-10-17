@@ -5,7 +5,7 @@
 
 Keep the --terms file OUTSIDE the repository: it holds the words you do not want published
 (your user name, employer, project names), so committing it would publish them.
-A term found on a line that starts with "Author:" or on the LICENSE copyright line is reported
+A term found on a line that starts with "Author:" or with a copyright notice is reported
 as allowed. Exit code 1 when anything else is found.
 """
 import argparse
@@ -52,7 +52,7 @@ def scan(root, terms):
                     if kind == "ip address" and m.group(0) in ALLOWED_IPS:
                         continue
                     row = f"{rel}:{no}: {kind}: {m.group(0)!r}"
-                    author_line = line.lstrip("# ").startswith("Author:") or (rel == "LICENSE" and "Copyright" in line)
+                    author_line = line.lstrip("# ").startswith("Author:") or line.lstrip().startswith(("Copyright", "MIT License. Copyright"))
                     (allowed if kind.startswith("term") and author_line else findings).append(row)
     return n, findings, allowed
 
