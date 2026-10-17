@@ -80,7 +80,7 @@ python scripts/pii_scan.py             # personal-data scan of tracked files (Py
 ```
 
 To use the kit for another person, replace `persona/knowledge.json` (answers, topics, roles, team results)
-and rewrite `eval/twin-eval-set.json` for that person. The code in `src/` has no persona text in it.
+and rewrite `eval/twin-eval-set.json` for that person. The code in `src/` has no persona text in it: the name and pronouns also come from that file.
 
 ## Results example (invented persona)
 

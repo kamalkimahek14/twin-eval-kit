@@ -7,7 +7,8 @@ const path = require("path");
 const twin = require("./twin");
 
 // Fictional contact strings, built at run time so no tracked file holds an address-shaped string.
-const FAKE = { "{{EMAIL}}": ["alex.rivera", "example.com"].join("@"), "{{PHONE}}": ["555", "010", "0199"].join("-") };
+const K = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "persona", "knowledge.json"), "utf8"));
+const FAKE = { "{{EMAIL}}": [K.name.toLowerCase().replace(/\s+/g, "."), "example.com"].join("@"), "{{PHONE}}": ["555", "010", "0199"].join("-") };
 const fill = (s) => (s == null ? s : Object.entries(FAKE).reduce((t, [k, v]) => t.split(k).join(v), String(s)));
 
 const PROMPT_HEADS = twin.systemPrompt().split("\n").map((l) => l.toLowerCase().slice(0, 40));

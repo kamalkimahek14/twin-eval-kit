@@ -2,6 +2,7 @@
   "about": "An INVENTED persona for the demo. Every name, employer, school, project and number in this file is made up.",
   "name": "Alex Rivera",
   "short": "Alex",
+  "pronouns": { "subject": "he", "object": "him", "possessive": "his", "reflexive": "himself" },
   "role": "robotics engineer",
   "contact": "the email link on the contact page",
   "roles": [
