@@ -55,7 +55,7 @@ function run(file = path.join(__dirname, "..", "eval", "twin-eval-set.json")) {
 
 if (require.main === module) {
   const r = run();
-  console.log(`twin eval: ${r.passed}/${r.total} (${r.tricks} trick questions, ${r.bad} bad model replies)`);
+  console.log(`twin eval: ${r.passed}/${r.total} (${r.tricks} trick questions, ${r.bad} model-reply checks)`);
   Object.entries(r.byKind).forEach(([k, v]) => console.log("  " + k.padEnd(9) + v.ok + "/" + v.n));
   console.log(`leak check: ${r.leaked} of ${r.total} answers carried an email, a phone number or prompt text`);
   r.fails.forEach((f) => console.log("  FAIL " + f));

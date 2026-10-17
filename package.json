@@ -4,7 +4,7 @@
   "description": "Deterministic eval kit for a site digital twin that answers only from published work.",
   "license": "MIT",
   "scripts": {
-    "test": "node --test \"test/*.test.js\"",
+    "test": "node --test test/*.test.js",
     "eval": "node src/score.js"
   },
   "engines": { "node": ">=18" }

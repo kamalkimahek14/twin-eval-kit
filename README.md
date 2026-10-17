@@ -4,6 +4,9 @@ A deterministic evaluation kit for a "digital twin": a chat box on a personal si
 only from that person's published work. The kit holds a small reference twin (rules only, no model call),
 a fixed eval set of 92 items, and a scorer that runs without any model or network.
 
+Used on: the twin on my site, kamal-mehta.com, which passes its own separate 100-item set (90 questions,
+30 of them tricks, and 10 bad model replies).
+
 Author: Kamal Mehta
 
 ![How it works, step by step](docs/how-it-works.svg)
@@ -82,7 +85,7 @@ and rewrite `eval/twin-eval-set.json` for that person. The code in `src/` has no
 ## Results example (invented persona)
 
 ```
-twin eval: 92/92 (32 trick questions, 20 bad model replies)
+twin eval: 92/92 (32 trick questions, 20 model-reply checks)
   approved 22/22
   topic    13/13
   premise  13/13
@@ -106,4 +109,4 @@ Examples of the corrections:
 
 ## License
 
-MIT. See [LICENSE](LICENSE).
+MIT License. Copyright (c) 2026 Kamal Mehta. See [LICENSE](LICENSE).
