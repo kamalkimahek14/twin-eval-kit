@@ -5,7 +5,7 @@ only from that person's published work. The kit holds a small reference twin (ru
 a fixed eval set of 92 items, and a scorer that runs without any model or network.
 
 Used on: the twin on my portfolio site, which passes its own separate 100-item set (90 questions,
-30 of them tricks, and 10 bad model replies).
+30 of them adversarial, and 10 bad model replies).
 
 Author: Kamal Mehta, built with AI-assisted coding to my specs · [kamal-mehta.com](https://kamal-mehta.com/?r=github)
 
