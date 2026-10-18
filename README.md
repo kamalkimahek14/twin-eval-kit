@@ -7,7 +7,7 @@ a fixed eval set of 92 items, and a scorer that runs without any model or networ
 Used on: the twin on my portfolio site, which passes its own separate 100-item set (90 questions,
 30 of them tricks, and 10 bad model replies).
 
-Author: Kamal Mehta · [kamal-mehta.com](https://kamal-mehta.com/?r=github)
+Author: Kamal Mehta, built with AI-assisted coding to my specs · [kamal-mehta.com](https://kamal-mehta.com/?r=github)
 
 ![How it works, step by step](docs/how-it-works.svg)
 
